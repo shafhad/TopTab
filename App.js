@@ -12,9 +12,9 @@ import TopTabNavigator from './Screens/MaterialTopTabNavigator';
 export default class App extends React.Component {
   render(){
   return (
-    <View>
-    <TopTabNavigator/>
-    </View>
+    
+    <AppContainer/>
+    
   );
 }
 }
