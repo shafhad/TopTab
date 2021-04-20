@@ -5,7 +5,7 @@ import { createMaterialTopTabNavigator } from '@react-navigation/material-top-ta
 
 function HomeScreen() {
   return (
-    <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
+    <View style={{ flex: 2, justifyContent: 'center', alignItems: 'center' }}>
       <Text>Home!</Text>
      
     </View>
@@ -40,20 +40,15 @@ export default class MyTab extends React.Component {
 */
 
 const Tab = createMaterialTopTabNavigator();
-
-function TopTabNavigator() {
-  return (
-    <Tab.Navigator>
-      <Tab.Screen name="Home" component={HomeScreen} />
-      <Tab.Screen name="Settings" component={SettingsScreen} />
-    </Tab.Navigator>
-  );
-}
-
-export default function App() {
-  return (
-    <NavigationContainer>
-      <TopTabNavigator />
-    </NavigationContainer>
-  );
+export default class TopTabNavigator extends React.Component {
+  render() {
+    return (
+      <NavigationContainer>
+        <Tab.Navigator>
+          <Tab.Screen name="Home" component={HomeScreen} />
+          <Tab.Screen name="Settings" component={SettingsScreen} />
+        </Tab.Navigator>
+      </NavigationContainer>
+    );
+  }
 }
