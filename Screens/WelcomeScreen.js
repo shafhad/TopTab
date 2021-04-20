@@ -16,7 +16,7 @@ export default class WelcomeScreen extends React.Component {
                 <Text style = {styles.header}>Newsly</Text>
                 <Text style = {styles.Tagline}>News made easy</Text>
                 <TouchableOpacity style = {styles.LoginButton} onPress = { () => this.props.navigation.navigate('LoginScreen')}><Text style = {{fontSize:20,color:'#fff',fontWeight:'bold'}}>Login</Text></TouchableOpacity>
-                <TouchableOpacity style = {styles.SignupButton} onPress = { () => this.props.navigation.navigate('SignupScreen')}><Text style = {{fontSize:20,color:'#6dabe4',fontWeight:'bold'}}>Sign up</Text></TouchableOpacity>
+                <TouchableOpacity style = {styles.SignupButton} onPress = { () => this.props.navigation.navigate('TopTabNavigator')}><Text style = {{fontSize:20,color:'#6dabe4',fontWeight:'bold'}}>Sign up</Text></TouchableOpacity>
                 <Text style = {{fontSize:9,color:'#bab8b3',marginTop:'30%',textAlign:'center'}}>Copyright @sanatgupta</Text>
             </View>
         )
@@ -57,4 +57,5 @@ const styles = StyleSheet.create({
         alignSelf: 'center',
     },
   });
+  
   
